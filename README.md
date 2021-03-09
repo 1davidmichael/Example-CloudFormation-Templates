@@ -1,3 +1,3 @@
-# Example S3 Object Replication CloudFormation
+# Example CloudFormation Templates
 
-This template provides an example of configuring AWS S3 object replication based on the S3 object tag `Test` set to `True`.
+This repo provides an example of CloudFormation templates used to do common tasks in AWS.
