@@ -1,0 +1,5 @@
+taskcat_outputs/
+
+# Exclude editor configs
+.vim
+.vscode
