@@ -1,0 +1,27 @@
+name: Test CloudFormation Templates
+
+on:
+  push:
+    branches:
+      - feature/*
+
+jobs:
+  cloudformation-linter:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+
+    - name: Install taskcat
+      run: pip install taskcat
+
+    - name: Run taskcat
+      run: taskcat test run
+      working-directory: templates/read-only-iam-user-self-managed
