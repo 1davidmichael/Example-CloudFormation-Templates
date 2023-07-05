@@ -13,5 +13,9 @@ jobs:
 
     - name: cfn-lint
       uses: scottbrenner/cfn-lint-action@v2
-      with:
-        args: "**/*.yaml"
+
+    - name: Print the Cloud Formation Linter Version & run Linter.
+      run: |
+        shopt -s globstar # enable globbing
+        cfn-lint --version
+        cfn-lint -t ./**/*.yaml
